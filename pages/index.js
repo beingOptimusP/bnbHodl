@@ -1,82 +1,204 @@
 import Head from 'next/head'
-
+import { useState } from 'react'
+import { BsMoon } from 'react-icons/bs'
+import { BiSun } from 'react-icons/bi'
+import Image from 'next/image'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { SiStencyl } from 'react-icons/si'
 export default function Home() {
+
+  const [mode, setmode] = useState(true)
+  function Mode() {
+    if (mode === false) {
+      return <BsMoon onClick={() => { setmode(!mode) }} className="text-xl cursor-pointer focus:outline-none" />
+    } else {
+      return <BiSun onClick={() => { setmode(!mode) }} className="text-xl cursor-pointer dark:text-white focus:outline-none" />
+    }
+  }
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div className={mode ? "dark" : ""}>
+      <div className="dark:bg-gray-900 bg-white ">
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+        <div className="max-w-screen-lg mx-auto">
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+          <nav className="flex flex-row justify-between  mx-auto items-center py-2 shadow-2xl px-5">
+            <div >
+              <GiHamburgerMenu className="hidden lg:block text-2xl dark:text-white text-black" />
+            </div>
+            <div className="rounded relative w-full max-w-xl mr-6 focus-within:text-purple-500">
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+              <input type="text" className="rounded py-2 border block w-full text-sm focus:outline-none dark:text-gray-300 form-input leading-5 focus:border-gray-700 dark:border-gray-700 focus:shadow-outline-purple dark:focus:border-gray-600 dark:focus:shadow-outline-gray dark:bg-gray-700 pl-8 text-gray-700 focus:ring-2 focus:ring-gray-400"
+                placeholder="Paste your address here"
+              />
+            </div>
+            <div className="p-2 border border-gray-800  rounded">
+              <Mode />
+            </div>
+          </nav>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <section className="py-5">
+            <div className="w-11/12  mx-auto ">
+              <h1 className="text-4xl font-semibold text-black dark:text-white">TIKI Earnings Manager</h1>
+              <div className="text-white text-xl flex flex-row justify-between p-3 my-6 rounded bg-purple-600">
+                <div>
+                  <h1>Please enter your address above</h1>
+                </div>
+                <div>
+                  <h1>
+                    Buy a TIKI
+                  </h1>
+                </div>
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4  ">
+                <div className="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
+                  <div className="p-4 flex items-center">
+                    <div class="p-3 rounded-md text-orange-500 dark:text-orange-100 bg-orange-100 dark:bg-orange-500 mr-4">
+                      <SiStencyl className="text-2xl" />
+                    </div>
+                    <div>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
+                  <div className="p-4 flex items-center">
+                    <div class="p-3 rounded-md text-orange-500 dark:text-orange-100 bg-orange-100 dark:bg-orange-500 mr-4">
+                      <SiStencyl className="text-2xl" />
+                    </div>
+                    <div>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
+                  <div className="p-4 flex items-center">
+                    <div class="p-3 rounded-md text-orange-500 dark:text-orange-100 bg-orange-100 dark:bg-orange-500 mr-4">
+                      <SiStencyl className="text-2xl" />
+                    </div>
+                    <div>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800">
+                  <div className="p-4 flex items-center">
+                    <div class="p-3 rounded-md text-orange-500 dark:text-orange-100 bg-orange-100 dark:bg-orange-500 mr-4">
+                      <SiStencyl className="text-2xl" />
+                    </div>
+                    <div>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 mt-4">
+                <div class="p-4 flex items-center">
+                  <button class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-lg text-sm text-white bg-purple-600 border border-transparent opacity-50 w-full h-full  " disabled type="button">Payout Is Processing</button>
+                </div>
+              </div>
+
+
+
+
+              <div class="grid grid-cols-2 gap-4 mt-4">
+                <div class="border border-gray-300 min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 col-span-2">
+                  <div class="p-4 flex flex-col text-center items-center">
+                    <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/bnb.162aaf57.png" />
+                    <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">Total BNB Paid To TIKI Holders</p>
+                    <p class="text-green-400 dark:text-green-400 text-4xl md:text-6xl text-center mb-8">
+                      17,555
+                      <span class="text-yellow-300">BNB</span>
+                      <br />
+                      =$5,122,290
+                    </p>
+                  </div>
+                </div>
+
+                <div class="border border-gray-300 min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 col-span-2 lg:col-span-1">
+                  <div class="p-4 flex flex-col text-center items-center">
+                    <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/money.d301ec34.png" />
+                    <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">
+                      Your 0 TIKI Earns:
+                    </p>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Day</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Week</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Month</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Year</span>
+                      </p>
+                    </div>
+                    <p class="text-gray-600 py-1 dark:text-gray-400 text-xl text-center -mt-2">Dynamic estimations based on 24h of trading volume ($1,219,169)
+                    </p>
+                  </div>
+                </div>
+
+
+
+                <div class="border border-gray-300 min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 col-span-2 lg:col-span-1">
+                  <div class="p-4 flex flex-col text-center items-center">
+                    <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/money.d301ec34.png" />
+                    <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">
+                      Your 0 TIKI Earns:
+                    </p>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Day</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Week</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Month</span>
+                      </p>
+                    </div>
+                    <div class="flex">
+                      <p class="text-green-400 dark:text-green-400 text-2xl text-center">
+                        <span class="text-yellow-300">0.00 BNB</span>($0.00)
+                        <span class="text-gray-600 dark:text-gray-400 text-xl text-center ml-2 mt-2">Per Year</span>
+                      </p>
+                    </div>
+                    <p class="text-gray-600 py-1 dark:text-gray-400 text-xl text-center -mt-2">Dynamic estimations based on 24h of trading volume ($1,219,169)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-      </main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
+      </div>
     </div>
   )
 }
