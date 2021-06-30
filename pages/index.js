@@ -40,14 +40,14 @@ export default function Home() {
 
           <section className="py-5">
             <div className="w-11/12  mx-auto ">
-              <h1 className="text-4xl font-semibold text-black dark:text-white">TIKI Earnings Manager</h1>
+              <h1 className="text-4xl font-semibold text-black dark:text-white">BNBHODL Earnings Manager</h1>
               <div className="text-white text-xl flex flex-row justify-between p-3 my-6 rounded bg-purple-600">
                 <div>
                   <h1>Please enter your address above</h1>
                 </div>
                 <div>
                   <h1>
-                    Buy a TIKI
+                    Buy a BNBHODL
                   </h1>
                 </div>
               </div>
@@ -59,8 +59,8 @@ export default function Home() {
                       <SiStencyl className="text-2xl" />
                     </div>
                     <div>
-                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
-                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your BNBHODL Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 BNBHODL</p>
                     </div>
                   </div>
                 </div>
@@ -70,8 +70,8 @@ export default function Home() {
                       <SiStencyl className="text-2xl" />
                     </div>
                     <div>
-                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
-                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your BNBHODL Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 BNBHODL</p>
                     </div>
                   </div>
                 </div>
@@ -81,8 +81,8 @@ export default function Home() {
                       <SiStencyl className="text-2xl" />
                     </div>
                     <div>
-                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
-                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your BNBHODL Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 BNBHODL</p>
                     </div>
                   </div>
                 </div>
@@ -92,8 +92,8 @@ export default function Home() {
                       <SiStencyl className="text-2xl" />
                     </div>
                     <div>
-                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your TIKI Holdings</p>
-                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 TIKI</p>
+                      <p class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400">Your BNBHODL Holdings</p>
+                      <p class="text-lg font-semibold text-gray-700 dark:text-gray-200">0 BNBHODL</p>
                     </div>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ export default function Home() {
                 <div class="border border-gray-300 min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 col-span-2">
                   <div class="p-4 flex flex-col text-center items-center">
                     <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/bnb.162aaf57.png" />
-                    <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">Total BNB Paid To TIKI Holders</p>
+                    <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">Total BNB Paid To BNBHODL Holders</p>
                     <p class="text-green-400 dark:text-green-400 text-4xl md:text-6xl text-center mb-8">
                       17,555
                       <span class="text-yellow-300">BNB</span>
@@ -127,7 +127,7 @@ export default function Home() {
                   <div class="p-4 flex flex-col text-center items-center">
                     <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/money.d301ec34.png" />
                     <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">
-                      Your 0 TIKI Earns:
+                      Your 0 BNBHODL Earns:
                     </p>
                     <div class="flex">
                       <p class="text-green-400 dark:text-green-400 text-2xl text-center">
@@ -164,7 +164,7 @@ export default function Home() {
                   <div class="p-4 flex flex-col text-center items-center">
                     <img class="w-32 h-32 mb-4 mt-4" src="https://tikitoken.app/static/media/money.d301ec34.png" />
                     <p class="mt-4 font-semibold text-gray-600 dark:text-gray-300 text-3xl text-center">
-                      Your 0 TIKI Earns:
+                      Your 0 BNBHODL Earns:
                     </p>
                     <div class="flex">
                       <p class="text-green-400 dark:text-green-400 text-2xl text-center">
