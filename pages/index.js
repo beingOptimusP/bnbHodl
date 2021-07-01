@@ -10,7 +10,7 @@ export default function Home() {
         <section className="">
           <div className="w-11/12  mx-auto ">
             <h1 className="text-4xl font-semibold text-black dark:text-white">BNBHODL Earnings Manager</h1>
-            <div className="text-white text-xl flex flex-row justify-between p-3 my-3 rounded bg-purple-600">
+            <div className="text-white text-xl flex flex-row justify-between p-3 my-3 rounded bg-yellow-600">
               <div>
                 <h1>Please enter your address above</h1>
               </div>
@@ -70,7 +70,7 @@ export default function Home() {
 
             <div class="min-w-0 rounded-lg shadow-xs overflow-hidden bg-white dark:bg-gray-800 mt-4">
               <div class="p-4 flex items-center">
-                <button class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-lg text-sm text-white bg-purple-600 border border-transparent opacity-50 w-full h-full  " disabled type="button">Payout Is Processing</button>
+                <button class="align-bottom inline-flex items-center justify-center cursor-pointer leading-5 transition-colors duration-150 font-medium focus:outline-none px-4 py-2 rounded-lg text-sm text-white bg-yellow-600 border border-transparent opacity-50 w-full h-full  " disabled type="button">Payout Is Processing</button>
               </div>
             </div>
 
