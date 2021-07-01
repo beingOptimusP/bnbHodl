@@ -31,7 +31,7 @@ export default function Navbar({setmodep ,setsidebarp}) {
                     />
                 </div>
                 <div >
-                    <GiHamburgerMenu onClick={()=>{ setsideBar(!sideBar) }} className=" block lg:hidden text-2xl dark:text-white text-black m-1" />
+                    <GiHamburgerMenu onClick={()=>{ setsideBar(!sideBar) }} className="cursor-pointer block lg:hidden text-2xl dark:text-white text-black m-1" />
                 </div>
             </div>
         </nav>

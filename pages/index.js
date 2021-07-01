@@ -1,9 +1,9 @@
-import Head from 'next/head'
 
 import { SiStencyl } from 'react-icons/si'
 export default function Home() {
+
   return (
-    <div className=" h-screen overflow-scroll py-16">
+    <div className="  overflow-scroll py-16">
 
    
       <div className="max-w-screen-lg mx-auto">
