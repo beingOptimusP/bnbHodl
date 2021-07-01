@@ -13,7 +13,7 @@ export default function Aside({ setsidebarp }) {
                 <div className="py-4 text-gray-500 dark:text-gray-400">
                     <a className="flex ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="">
                         <img className="mr-2 w-6 h-8" src="logo.png" />
-                        <span class="self-center">The TIKI Bar</span>
+                        <span class="self-center">The BNBHODL Bar</span>
                     </a>
                     {/* <div  className="absolute right-0 top-0 p-4">
                         <GiHamburgerMenu onClick={() => { setsideBar(!sideBar) }} className=" block lg:hidden text-2xl dark:text-white text-black m-1" />
