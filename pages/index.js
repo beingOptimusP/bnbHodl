@@ -3,10 +3,10 @@ import { SiStencyl } from 'react-icons/si'
 export default function Home() {
 
   return (
-    <div className="  overflow-scroll py-16">
+    <div className="h-screen  overflow-y-scroll ">
 
    
-      <div className="max-w-screen-lg mx-auto">
+      <div className="max-w-screen-lg mx-auto py-5 mb-10">
         <section className="">
           <div className="w-11/12  mx-auto ">
             <h1 className="text-4xl font-semibold text-black dark:text-white">BNBHODL Earnings Manager</h1>
